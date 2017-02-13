@@ -19,29 +19,21 @@ function funcao_da_minha_acao_ajax() {
 	// Modificar o nome do remetente
 	add_filter( 'wp_mail_from_name', 'ewp_ep_mail_from_name' );
 	function ewp_ep_mail_from_name() {
-	    return "Eko Construtora - Hotel IBIS Arujá"; // Poderia também usar get_bloginfo( 'name' );		 
+	    return "Eko Construtora - ".get_bloginfo('name'); // Poderia também usar get_bloginfo( 'name' );		 
 	}
 
 	parse_str($_REQUEST['dados'], $array_dados);
 
-	if (!isset($array_dados['sml_name']) OR empty($array_dados['sml_name']) OR 
-		!isset($array_dados['sml_email']) OR empty($array_dados['sml_email']) OR !is_email($array_dados['sml_email'])) {
-		
-		echo json_encode(array('class' => 'erro', 'mensagem' => 'Todos os campos são obrigatórios.'));
+	$tabela = ''; //url do link da tabela aqui
 
+	//Fazer a mensagem com uma variavel $mensagem
+	$mensagem = "Olá, ".$array_dados['name']."\n ";
+
+	if (wp_mail($array_dados['email'], 'Tabela de Valores - '.get_bloginfo('name'), $mensagem, $tabela)) {
+		echo json_encode(array('class' => 'sucesso', 'mensagem' => 'Mensagem enviada com sucesso!'));
 	} else {
-
-		//Fazer a mensagem com uma variavel $mensagem
-		$mensagem = "Olá, ".$array_dados['sml_name']."\n ";
-
-		if (wp_mail($array_dados['sml_email'], 'Tabela de Valores - Hotel IBIS Arujá', $mensagem)) {
-			echo json_encode(array('class' => 'sucesso', 'mensagem' => 'Mensagem enviada com sucesso!'));
-		} else {
-			echo json_encode(array('class' => 'erro', 'mensagem' => 'Sua mensagem não foi enviada.'));
-		}
-
+		echo json_encode(array('class' => 'erro', 'mensagem' => 'Sua mensagem não foi enviada.'));
 	}
-
 
 	wp_die();
 

@@ -63,9 +63,8 @@
 			});
 		</script>
 
-        <!-- Início do script Omnize --> 
+        <!-- Início do script Omnize -->
 		<script>document.addEventListener('DOMContentLoaded',function(){var JSLink=location.protocol+'//widget.omnize.com',JSElement=document.createElement('script');JSElement.async=!0;JSElement.charset='UTF-8';JSElement.src=JSLink;JSElement.onload=OnceLoaded;document.getElementsByTagName('body')[0].appendChild(JSElement);function OnceLoaded(){wOmz.init({id:3666});}},false);</script> 
-		<!-- Fim do script Omnize -->
 
 		<!--Google Analytics-->
 		<script>
@@ -83,25 +82,21 @@
 	</head>
 <body>
 
-<div class="lightbox">
+<div class="lightbox material-publicitario">
 	<div class="mask"></div>
 	<div class="container">
 		<div class="box-light col-md-6 center">
 			<span class="close-box"></span>
-				<div class="scroll-text swiper-container">
-					<div class="swiper-wrapper">
-						<div class="swiper-slide">
-							<article>
-								<?php $post_id = 39;  //id da pagina "material publicitario"
-								$queried_post = get_post($post_id);
-								$title = $queried_post->post_title;
-								// exibe titulo echo $title;?>
-								<h2><?php echo $title; ?></h2>
-								<p><?php echo $queried_post->post_content ?></p>									
-							</article>
-						</div>
-						<div class="swiper-scrollbar"></div>						
-					</div>
+				<div class="scroll-text">
+					<article>
+						<?php //aqui é 39 ?>
+						<?php $post_id = 39;  //id da pagina "material publicitario"
+						$queried_post = get_post($post_id);
+						$title = $queried_post->post_title;
+						// exibe titulo echo $title;?>
+						<h2><?php echo $title; ?></h2>
+						<p><?php echo $queried_post->post_content ?></p>									
+					</article>	
 				</div>
 			</div>
 		</div>
@@ -112,21 +107,21 @@
 	<div class="container">
 		<div class="row">
 			<nav class="menu-desktop">
-				<a href="#">
+				<a href="#home-slide">
 					<h1 title="<?php bloginfo('name') ?>" class="logo">
 						<img src="<?php bloginfo('template_url') ?>/img/logo-ibis.png" alt="<?php bloginfo('name') ?>" title="<?php bloginfo('name') ?>">
 					</h1>
 				</a>
 				<ul>
-					<li><a href="#">Home</a></li>
+					<li><a href="#home-slide">Home</a></li>
 					<li><a href="#enterprise-content">Empreendimento</a></li>
 					<li><a href="#location-content">Localização</a></li>
 					<li><a href="#advantages-content">Invista</a></li>
-					<li><a href="#benefits-content">Benefícios</a></li>
-					<li><a href="#leaders-content">Realização</a></li>
+					<!--<li><a href="benefits-content">Benefícios</a></li>-->
 					<li><a href="#faq-content">FAQ</a></li>
+					<li><a href="#leaders-content">Realização</a></li>
 					<li><a href="#contact-content">Contato</a></li>
-					<li><span class="open-lightbox"><a href="">Material publicitário</a></span></li>
+					<li class="pull-right"><span class="open-material">Material publicitário</span></li>
 				</ul>
 			</nav>
 
@@ -147,13 +142,13 @@
 			</div>
 		</div>
 		<ul>
-			<li><a href="#">Home</a></li>
+			<li><a href="#home-slide">Home</a></li>
 			<li><a href="#enterprise-content">Empreendimento</a></li>
 			<li><a href="#location-content">Localização</a></li>
 			<li><a href="#advantages-content">Invista</a></li>
-			<li><a href="#benefits-content">Benefícios</a></li>
-			<li><a href="#leaders-content">Realização</a></li>
+			<!--<li><a href="#benefits-content">Benefícios</a></li>-->
 			<li><a href="#faq-content">FAQ</a></li>
+			<li><a href="#leaders-content">Realização</a></li>
 			<li><a href="#contact-content">Contato</a></li>
 		</ul>
 	</nav>
@@ -164,32 +159,22 @@
 <section id="home-slide" class="content-site">
 	<div class="swiper-container slidehome">
 		<div class="swiper-wrapper">
-			<div class="swiper-slide" style="background: url('<?php bloginfo('template_url') ?>/img/slide1.jpg'); background-size: cover;">
-			</div>
+			<div class="swiper-slide" style="background: url('<?php bloginfo('template_url') ?>/img/slide1.jpg'); background-size: cover;">Teste</div>
 		</div>
 		<div class="container">
 			<div class="row">
-				<section class="newsletter-box box-content col-md-5 col-sm-12 col-xs-12">
+				<section class="newsletter-box box-content col-lg-5 col-md-7 col-sm-12 col-xs-12">
 					<header>
-						<h2><strong>Invista em um hotel</strong><br />que é <strong>referência mundial</strong></h2>
+						<h2><strong>Invista em um hotel</strong> de marca <strong>reconhecida internacionalmente</strong></h2>
 						<h3><strong>Cadastre-se</strong> e saiba como</h3>
 					</header>
-					 <?php
-					    $args = array(
-					        'prepend' => '', 
-			                'showname' => true,
-			                'nametxt' => '', 
-			                'nameholder' => 'Nome:', 
-			                'emailtxt' => '',
-			                'emailholder' => 'E-mail:', 
-			                'showsubmit' => true, 
-			                'submittxt' => 'Enviar', 
-			                'jsthanks' => true,
-			                'thankyou' => 'Ajax não funcionou :('
-					    );
-					    echo smlsubform($args);
-					?>
-					<button type="button" id='solicita_tabela'><strong>Solicitar tabela</strong> de valores</button>		
+
+					<div id="hotel-ibis-0170bafa40236b4788db"></div>
+					<script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
+					<script type="text/javascript">
+					  new RDStationForms('hotel-ibis-0170bafa40236b4788db-html', 'UA-47651710-1').createForm();
+					</script>
+
 				</section>
 			</div>
 		</div>
@@ -201,36 +186,26 @@
 <section id="enterprise-content" class="content-site bgParallax" data-speed="10">
 	<div class="container">
 		<div class="row">
-			<section class="newsletter-box box-content col-md-5">
+			<section class="newsletter-box box-content col-lg-5 col-md-7 col-sm-12 col-xs-12">
 
 				<header>
 					<h2><strong>Empreendimento</strong></h2>
-					<h3>Venha ser parceiro de uma marca de referência global, em uma cidade em expansão como Arujá, um local único e estratégico.</h3>
+					<h3>Venha ser parceiro da ACCOR, empresa líder em operação hoteleira e IBIS, uma marca de referência global, em uma cidade em expansão como Arujá/SP. <small>Dados obtidos em: <a href="http://accorhotels-group.com" target="_blank">accorhotels-group.com</a></small></h3>
 				</header>
 
-				<?php
-				    $args = array(
-				        'prepend' => '', 
-		                'showname' => true,
-		                'nametxt' => '', 
-		                'nameholder' => 'Nome:', 
-		                'emailtxt' => '',
-		                'emailholder' => 'E-mail:', 
-		                'showsubmit' => true, 
-		                'submittxt' => 'Enviar', 
-		                'jsthanks' => true,
-		                //'thankyou' => 'Ajax não funcionou :('
-				    );
 
-				    echo smlsubform($args);
+				<div id="hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b"></div>
+				<script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
+				<script type="text/javascript">
+				  new RDStationForms('hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b-html', 'UA-47651710-1').createForm();
+				</script>
 
-				?>
-				<button type='button' value='solicitar' name='solicitar' id='solicita_tabela'><strong>Solicitar tabela</strong> de valores</button>				
+							
 			</section>
 		</div>
 		<div class="row">
 			<!--baixar documentos-->
-			<div class="doc-down col-md-8">
+			<div class="doc-down col-lg-8 col-md-12">
 				<div class="row">
 					<header class="col-xs-12">
 						<h4><strong>Baixar</strong> documentos</h4>
@@ -295,7 +270,7 @@
 	<div class="container">
 		<div class="box-content">
 			<div class="row">
-				<header class="col-md-5">
+				<header class="col-lg-5 col-md-7 col-sm-12 col-xs-12">
 					<h2>Arujá <strong>está entre as 100 melhores</strong> cidades do brasil para <strong>investir</strong></h2>
 					<h3>O maior IDH do Alto Tiête<br /><a href="#">Confira na matéria do G1</a></h3>
 				</header>
@@ -338,7 +313,7 @@ Ayrton Senna, Fernão Dias e Rodoanel">
 	<div class="container">
 		<section class="box-content">
 			<div class="row">
-				<header class="col-md-5">
+				<header class="col-lg-5 col-md-7 col-sm-12 col-xs-12">
 					<h2>Quais as <strong>vantagens de Investir</strong> em Hotel?</h2>
 				</header>
 			</div>
@@ -381,6 +356,39 @@ os outros investidores. <strong>A receita não vem somente das locações dos qu
 	</section>
 </section>
 
+<section id="faq-content" class="content-site bgParallax" data-speed="10">
+
+	<header>
+		<h2>Dúvidas Frequentes</h2>
+	</header>
+
+	<div class="container">
+		<div class="row">
+			<div id="faq-itens" class="col-md-10">
+				<ul>
+					<?php $args = array(
+						'post_type' => 'faq',
+						'orderby' => 'date',
+						'order' => 'DESC',
+						//'posts_per_page' => '4',
+						//'cat' => '2'
+						);
+					?>
+					<?php query_posts($args); ?>		
+    				<?php if (have_posts()): while (have_posts()): the_post(); ?>
+					<li>
+						<h5><?php the_title(); ?></h5>
+						<div class="dropdown">
+							<?php the_content(); ?>
+						</div>
+					</li>
+					<?php endwhile; endif;?>				
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
+<?php /*
 <section id="benefits-content" class="content-site bgParallax" data-speed="10">
 	<div class="container">
 		<article class="box-content">
@@ -420,8 +428,8 @@ os outros investidores. <strong>A receita não vem somente das locações dos qu
 			</div>
 		</article>
 	</div>
-</section>
-
+</section> */
+?>
 <section id="leaders-content" class="content-site">
 	<div class="container">
 		<article class="box-content">
@@ -477,38 +485,6 @@ os outros investidores. <strong>A receita não vem somente das locações dos qu
 	</div>
 </section>
 
-<section id="faq-content" class="content-site bgParallax" data-speed="10">
-
-	<header>
-		<h2>Dúvidas Frequentes</h2>
-	</header>
-
-	<div class="container">
-		<div class="row">
-			<div id="faq-itens" class="col-md-10">
-				<ul>
-					<?php $args = array(
-						'post_type' => 'faq',
-						'orderby' => 'date',
-						'order' => 'DESC',
-						//'posts_per_page' => '4',
-						//'cat' => '2'
-						);
-					?>
-					<?php query_posts($args); ?>		
-    				<?php if (have_posts()): while (have_posts()): the_post(); ?>
-					<li>
-						<h5><?php the_title(); ?></h5>
-						<div class="dropdown">
-							<?php the_content(); ?>
-						</div>
-					</li>
-					<?php endwhile; endif;?>				
-				</ul>
-			</div>
-		</div>
-	</div>
-</section>
 <section id="contact-content" class="content-site">
 	<div class="container">
 		<section class="box-content">
@@ -526,15 +502,28 @@ os outros investidores. <strong>A receita não vem somente das locações dos qu
 					</header>
 				</div>
 				<div class="col-md-6">
+					<!--
 					<form id="formcontato" action="<?php bloginfo('template_url') ?>/send.php" method="post">
-						<p><input type="text" name="nome" placeholder="Nome"></p>
-						<p><input type="text" name="email" placeholder="E-mail"></p>
-						<p><input type="text" name="tel" placeholder="Telefone"></p>
+						<p><input type="text" name="nomecontato" placeholder="Nome"></p>
+						<p><input type="text" name="emailcontato" placeholder="E-mail"></p>
+						<p><input type="text" name="telcontato" placeholder="Telefone"></p>
 						<p>
-							<button type="button" class="open-tel">Clique para <strong>exibir o telefone</strong></button>
-							<input type="submit" name="enviar" value="enviar">
+							<button type="button" id="enviar">Enviar</button>
 						</p>
 					</form>
+					-->
+
+
+					<div id="hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871"></div>
+					<script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
+					<script type="text/javascript">
+						new RDStationForms('hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871-html', 'UA-47651710-1').createForm();
+					</script>
+
+					<div style="padding: 0 20px; width: 100%;">
+						<button type="button" class="open-tel">Clique para <strong>exibir o telefone</strong></button>
+					</div>
+
 				</div>
 			</div>
 		</section>
@@ -544,20 +533,59 @@ os outros investidores. <strong>A receita não vem somente das locações dos qu
 <footer id="site">
 	<div class="container">
 		<div class="row">
-			<ul>
-				<li class="col-md-2 col-xs-12"><p style="margin: 7px 0;"><strong>Fale conosco</strong></p></li>
-				<li class="col-md-2 col-xs-3"><a href="http://www.ekoconstrutora.com.br/fale-conosco/" class="ico-mail" target="_blank"><p>Atendimento <span>por e-mail</span></p></a></li>
-				<li class="col-md-2 col-xs-3"><a href="http://www.ekoconstrutora.com.br/ligamos-para-voce/" class="ico-tel" target="_blank"><p>Ligamos <span>para você</span></p></a></li>
-				<li class="col-md-2 col-xs-3"><a href="http://www.ekoconstrutora.com.br/agende-uma-visita/" class="ico-agenda" target="_blank"><p>Agende <span>uma visita</span></p></a></li>
-				<li class="col-md-2 col-xs-3"><a href="#" class="ico-whatsapp" target="_blank"><p>Atendimento <span>via whatsapp</span></p></a></li>
-				<li class="col-md-2 chat-online"><a href="javascript:openChat()" class="" target="_blank"><p>Atendimento <span>online</span></p></a></li>
+			<ul>	
+				<li class="col-20 first"><p style="margin: 7px 0;"><strong>Fale conosco</strong></p></li>
+				<li class="col-20"><a href="http://www.ekoconstrutora.com.br/fale-conosco/" class="ico-mail" target="_blank"><p>Atendimento <span>por e-mail</span></p></a></li>
+				<li class="col-20"><a href="http://www.ekoconstrutora.com.br/ligamos-para-voce/" class="ico-tel" target="_blank"><p>Ligamos <span>para você</span></p></a></li>
+				<li class="col-20"><a href="http://www.ekoconstrutora.com.br/agende-uma-visita/" class="ico-agenda" target="_blank"><p>Agende <span>uma visita</span></p></a></li>
+				<li class="col-20"><a href="javascript:void(0);" class="ico-whatsapp open-whatsapp" target="_blank"><p>Atendimento <span>via whatsapp</span></p></a></li>
+				<!--
+				<li class="col-md-2 chat-online"><a href="javascript:openChat()" class="" target="_blank"><p>Atendimento <span>online</span></p></a></li>-->
 			</ul>
 		</div>
 	</div>
-	
+
 </footer>
 
+
+<div class="lightbox whatsapp-box">
+	<div class="mask"></div>
+	<div class="container">
+		<div class="row">
+			<div class="box-light col-md-12 center">
+
+				<header>
+					<div class="row">
+						<div class="col-xs-3">
+							<i class="fa fa-whatsapp"></i>
+						</div>
+						<div class="col-xs-9">
+							<h4>Atendimento via <span>Whatsapp</span></h4>
+						</div>
+					</div>
+				</header>
+				<section>
+					<div class="row">
+						<div class="col-xs-12">
+							<div id="hotel-ibis-formulario-whatsapp-366e68e297da517f6691"></div>
+							<script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
+							<script type="text/javascript">
+							  new RDStationForms('hotel-ibis-formulario-whatsapp-366e68e297da517f6691-html', 'UA-47651710-1').createForm();
+							</script>
+						</div>
+					</div>
+				</section>
+
+
+				<span class="close-box"></span>
+			</div>
+		</div>
+	</div>
+</div>
+
 <script type="text/javascript">
+
+
 	var slider = new Swiper('.slidehome', {
 	    loop:true,
 	    effect:'fade'
@@ -584,27 +612,19 @@ os outros investidores. <strong>A receita não vem somente das locações dos qu
         }
 	});
 
+	/*
 	var swiper = new Swiper('.scroll-text', {
         scrollbar: '.swiper-scrollbar',
         direction: 'vertical',
         slidesPerView: 'auto',
         mousewheelControl: true,
         freeMode: true
-    });
+    });*/
 
 </script>
 
-<script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/integration/stable/rd-js-integration.min.js"></script>  
-<script type="text/javascript">
-    var meus_campos = {
-        'sml_name': 'nome',
-        'sml_email': 'email'
-     };
-    options = { fieldMapping: meus_campos };
-    RdIntegration.integrate('5bc74d9a15dc71ab1bd0bc162ae544d5', 'IBIS Arujá - Subscribe 1', options);
-    RdIntegration.integrate('5bc74d9a15dc71ab1bd0bc162ae544d5', 'IBIS Arujá - Subscribe 2', options);
-</script>
 
+<!--
 <script type="text/javascript">
     var meus_campos = {
         'nome': 'nome',
@@ -613,7 +633,41 @@ os outros investidores. <strong>A receita não vem somente das locações dos qu
      };
     options = { fieldMapping: meus_campos };
     RdIntegration.integrate('5bc74d9a15dc71ab1bd0bc162ae544d5', 'IBIS - Contato', options);  
-</script>
+</script>-->
+
+<style type="text/css">
+	
+	div#conversion-hotel-ibis-0170bafa40236b4788db.wrapper,
+	div#conversion-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b.wrapper,
+	div#conversion-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871.wrapper {background: transparent !important;}
+
+	#form-container-hotel-ibis-0170bafa40236b4788db #conversion-hotel-ibis-0170bafa40236b4788db section,
+	#form-container-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b #conversion-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b section {margin-left: -20px !important;}
+	#conversion-hotel-ibis-0170bafa40236b4788db form input,
+	#conversion-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b form input,
+	#conversion-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 form input,
+	#form-hotel-ibis-formulario-whatsapp-366e68e297da517f6691 form input {
+		border: 0 !important;
+		padding: 10px !important;
+		border-radius: 0 !important;
+		font-size: 24px;
+
+	}
+
+	#form-hotel-ibis-formulario-whatsapp-366e68e297da517f6691 form input {background: #EEE !important;}
+
+	#form-container-hotel-ibis-0170bafa40236b4788db #conversion-hotel-ibis-0170bafa40236b4788db #conversion-form-hotel-ibis-0170bafa40236b4788db div.actions input.call_button,
+	#form-container-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b #conversion-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b #conversion-form-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b div.actions input.call_button,
+	#form-container-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 #conversion-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 #conversion-form-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 div.actions input.call_button {border-radius: 0 !important; border: 0 !important; box-shadow: none !important;}
+	#conversion-modal-hotel-ibis-0170bafa40236b4788db .modal-content section div.actions, #conversion-hotel-ibis-0170bafa40236b4788db section div.actions,
+	#conversion-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b section div.actions,
+	#conversion-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 section div.actions {padding: 0px 0 8px 0!important;}
+	#form-hotel-ibis-0170bafa40236b4788db *,
+	#form-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b *,
+	#form-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 *,
+	#form-hotel-ibis-formulario-whatsapp-366e68e297da517f6691 * {font-family: 'Open Sans', sans-serif !important;}
+
+</style>
 
 <?php wp_footer();?>
 

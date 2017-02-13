@@ -25,14 +25,24 @@ $(function(){
 	});
 });
 
-//Scroll para ID's
+
+//scroll
 $(function(){
-	$('nav.menu-desktop a, nav.menu-mobile a').click(function(e){
-		$.scrollTo((this.hash) || 0, 500);
-		$('nav.menu-mobile ul').slideUp("fast");
+
+	var elements = $('nav.menu-desktop a, nav.menu-mobile a');
+
+	elements.click(function(e){
+		var offThis = $(this.hash).offset().top;
+		var alturaHeader = $('header#top-site').outerHeight();
+		var menuScroll = offThis - alturaHeader;
+		$.scrollTo((menuScroll) || 0, 500);
 		e.preventDefault();
+		if ($(window).width() <= 768) {$('.menu-mobile ul').slideUp();}
 	});
 });
+
+
+
 
 //faq
 $(function(){
@@ -50,19 +60,35 @@ $(function(){
 
 //abre lightbox quando clica
 $(function(){
-	$('.open-lightbox').on('click',function(){
-		$('.lightbox').fadeIn('fast',function(){
+	$('.open-material').on('click',function(){
+		$('.material-publicitario').fadeIn('fast',function(){
 			$('.close-box, .mask').on('click',function(){
-				$('.lightbox').fadeOut();
+				$('.material-publicitario').fadeOut();
 			});
 		});
 	});
 });
 
+//material publicitario
 $(document).ready(function(){
-	$('.lightbox').fadeIn('fast',function(){
+	$('.material-publicitario').fadeIn('fast',function(){
 		$('.close-box, .mask').on('click',function(){
-			$('.lightbox').fadeOut();
+			$('.material-publicitario').fadeOut();
 		});
 	});
+});
+
+$(function(){
+
+	//whatsapp form
+	$('.open-whatsapp').click(function(e){
+		$('.whatsapp-box').fadeIn('fast',function(){
+			$(this).css({'display':'flex'});
+			$('.close-box, .mask').on('click',function(){
+				$('.whatsapp-box').fadeOut();
+			});
+		});
+		e.preventDefault();
+	});
+
 });
