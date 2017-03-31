@@ -39,7 +39,20 @@ function funcao_da_minha_acao_ajax() {
 
 }
 
+//Thubmnails
 add_theme_support('post-thumbnails');
 add_image_size('galery-big-photo', 900, false);
 add_image_size('galery-small-photo', 370, 220, true);
+
+// Mover os scripts para o footer
+function remove_head_scripts() { 
+   remove_action('wp_head', 'wp_print_scripts'); 
+   remove_action('wp_head', 'wp_print_head_scripts', 9); 
+   remove_action('wp_head', 'wp_enqueue_scripts', 1);
+
+   add_action('wp_footer', 'wp_print_scripts', 5);
+   add_action('wp_footer', 'wp_enqueue_scripts', 5);
+   add_action('wp_footer', 'wp_print_head_scripts', 5); 
+} 
+add_action( 'wp_enqueue_scripts', 'remove_head_scripts' );
 

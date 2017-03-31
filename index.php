@@ -56,7 +56,7 @@
 	</head>
 <body <?php body_class() ?>>
 
-<div style="display: none; max-width: 400px; margin-left: 20px; margin-right: 20px;" id="materialpublicitario">
+<div style="display: none; max-width: 550px; margin-left: 20px; margin-right: 20px;" id="materialpublicitario">
 	<article class="box-text">
 		<?php //aqui é 39 ?>
 		<?php $post_id = 39;  //id da pagina "material publicitario"
@@ -98,7 +98,7 @@
 	<div class="container">
 		<div class="row">
 			<nav class="menu-desktop">
-				<a href="#home-slide">
+				<a href="#homeslide">
 					<h1 title="<?php bloginfo('name') ?>" class="logo">
 						<img src="<?php bloginfo('template_url') ?>/img/logo-ibis.png" alt="<?php bloginfo('name') ?>" title="<?php bloginfo('name') ?>">
 					</h1>
@@ -152,7 +152,7 @@
 		<div class="row">
 			<section class="newsletter-box box-content col-lg-5 col-md-7 col-sm-12 col-xs-12">
 				<header>
-					<h2><strong>Invista em um hotel</strong> de marca <strong>reconhecida internacionalmente</strong></h2>
+					<h2><strong>Invista em um hotel</strong> <br/>com a bandeira<strong> Ibis</strong></h2>
 					<h3><strong>Cadastre-se</strong> e saiba como</h3>
 				</header>
 
@@ -234,7 +234,7 @@
 				<?php if (have_posts()): while (have_posts()): the_post(); ?>
 
 				<div class="swiper-slide">
-					<a href="<?php the_post_thumbnail_url('galery-big-photo'); ?>" data-fancybox="gallery1" title="Legenda">
+					<a href="<?php the_post_thumbnail_url('galery-big-photo'); ?>" data-fancybox="gallery1" title="">
 						<?php the_post_thumbnail('galery-small-photo'); ?>
 					</a>
 				</div>
@@ -304,6 +304,7 @@ Ayrton Senna, Fernão Dias e Rodoanel">
 				</header>
 			</div>
 			<article class="row">
+				<!--
 				<div class="col-md-4">
 					<p>Um <strong>investimento tão atrativo  que a modalidade combina a possibilidade 
 de se obter uma boa rentabilidade com segurança do capital investido.</strong> As unidades são registradas em propriedade horizontal 
@@ -317,7 +318,24 @@ e as escrituras no nome de proprietário.</p>
 				<div class="col-md-4">
 					<p>O investidor que adquirir uma unidade, recebe em quantia igual dividida entre 
 os outros investidores. <strong>A receita não vem somente das locações dos quartos, mas sim de todos os serviços que fazem parte do empreendimento</strong> hoteleiro.</p>
+				</div>-->
+
+				<div class="col-md-4">
+					<p>O investimento no setor hoteleiro se transformou em uma boa opção de investimento, propiciando ao investidor segurança patrimonial.</p>
+					<p>Adquirindo uma unidade em um hotel, o investidor não precisa se preocupar com a manutenção do imóvel, ou inadimplência e ainda possibilita a valorização patrimonial de um imóvel comercial de alto padrão. </p>
 				</div>
+
+				<div class="col-md-4">
+					<p>O que faz do Hotel uma forma de investimento tão atrativa é que a modalidade combina a possibilidade de se obter uma boa rentabilidade com segurança do capital investido. As unidades são registradas em propriedade horizontal e as escrituras no nome de proprietário.</p>
+					<p><strong><i>Não há garantia de que o retorno financeiro atenderá as projeções inicialmente realizadas.</i></strong></p>
+				</div>
+
+				<div class="col-md-4">
+					<p>O investidor que adquirir uma unidade, recebe em quantia igual dividida entre os outros investidores, o lucro que o hotel obteve. A receita não vem somente das locações dos quartos, mas sim de todos os serviços que fazem parte do empreendimento hoteleiro: como Restaurante, Bar, lavanderia, estacionamento, etc... </p>
+					<p><strong><i>A operação hoteleira do empreendimento pode apresentar prejuízo no fluxos de caixa negativos por um período indeterminado.</i></strong></p>
+				</div>
+
+
 			</article>
 		</section>
 	</div>
@@ -501,8 +519,8 @@ os outros investidores. <strong>A receita não vem somente das locações dos qu
 
 
 					<div id="hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871"></div>
-					<script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
-					<script type="text/javascript">
+					<script async type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
+					<script async type="text/javascript">
 						new RDStationForms('hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871-html', 'UA-47651710-1').createForm();
 					</script>
 
@@ -559,16 +577,23 @@ os outros investidores. <strong>A receita não vem somente das locações dos qu
 <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/jquery.scrollTo.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/swiper.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/swiper.jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
 <script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/main.js"></script>
 <script type="text/javascript">
-	$('[data-fancybox]').fancybox({
-
-		youtube : {
-			controls : 1,
-			showinfo : 0
-		}
+	
+	$(document).ready(function(){
+		$('[data-fancybox]').fancybox();	
+		$.fancybox.open({
+			src  : '#materialpublicitario',
+			type : 'inline',
+			/*opts : {
+				onComplete : function() {
+					console.info('!');
+				}
+			}*/
+		});
 	});
+	
 </script>
 
 <script>document.addEventListener('DOMContentLoaded',function(){var JSLink=location.protocol+'//widget.omnize.com',JSElement=document.createElement('script');JSElement.async=!0;JSElement.charset='UTF-8';JSElement.src=JSLink;JSElement.onload=OnceLoaded;document.getElementsByTagName('body')[0].appendChild(JSElement);function OnceLoaded(){wOmz.init({id:3666});}},false);
@@ -587,7 +612,7 @@ os outros investidores. <strong>A receita não vem somente das locações dos qu
 
 
 
-<script type="text/javascript">
+<script async type="text/javascript">
 
 	var slider = new Swiper('.slidehome', {
 	    loop:true,
@@ -626,7 +651,7 @@ os outros investidores. <strong>A receita não vem somente das locações dos qu
 
 </script>
 
-<script type="text/javascript">
+<script async type="text/javascript">
 	//Paralaxx
 	$(function(){
 
@@ -641,8 +666,6 @@ os outros investidores. <strong>A receita não vem somente das locações dos qu
 			});	
 		}
 	});
-
-
 </script>
 
 <?php wp_footer();?>
