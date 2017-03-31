@@ -1,7 +1,7 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans:300,400,700';
 
 html, body {
-	height: 100% !important;
+	height: 100%;
 	font-family: 'Open Sans', sans-serif !important;
 	margin: 0;
 	padding: 0;
@@ -38,7 +38,10 @@ h6 {
 	font-weight: 300 !important;
 }
 
-img {max-width: 100%; height: auto;}
+img {
+	max-width: 100%;
+	height: auto;
+}
 
 ul {padding-left: 0;}
 
@@ -55,8 +58,6 @@ form input, button {
 	-webkit-transition: 0.3s;
 	-moz-transition: 0.3s;
 }
-
-
 
 header#top-site {
 	width: 100%;
@@ -214,23 +215,17 @@ nav.menu-mobile ul li a:hover {
     overflow-x: hidden;
 }
 
-
-.slidehome {
-	position: absolute;
-	top: 0;
-	display: block;
+#homeslide {
+	background: url('../img/slide1.jpg') no-repeat center top;
+	background-size: cover;
 }
 
-.slidehome .container {
-	position: relative;
-}
-
-.slidehome .box-content {
-	z-index: 1;
-	position: absolute;
-	top: -600px;
-	display: block;
-	padding-top: 0;
+#homeslide,
+#homeslide .container,
+#homeslide .row {height: 100%;}
+#homeslide .row {
+	display: flex;
+	align-items: center;
 }
 
 .box-content {
@@ -253,19 +248,16 @@ nav.menu-mobile ul li a:hover {
 }
 
 .box-content header h3 {
-	font-size: 1.2rem;
+	font-size: 1.8rem;
 }
 
 .slidehome,
 .content-site {
-	height: 800px /*!important*/;
+	height: 100% /*!important*/;
 }
 
-.content-site a,
-.lightbox a {color: #bf262b ;}
-
-.content-site a:hover,
-.lightbox a:hover {color: #bf262b;}
+.content-site a {color: #bf262b ;}
+.content-site a:hover {color: #bf262b;}
 
 .newsletter-box {
 	z-index: 0;
@@ -321,7 +313,7 @@ nav.menu-mobile ul li a:hover {
 	padding-bottom: 100px;
 }
 
-#enterprise-content small {font-size: 12px;}
+#enterprise-content small {font-size: 12px; margin-top: 20px;}
 
 #location-content {
 	background: url('../img/background_2.jpg') no-repeat center;
@@ -699,67 +691,28 @@ footer#site ul:after,
 	content: "";
 }
 
-.lightbox {
-	width: 100%;
-	height: 100%;
-	position: fixed;
-	top: 0;
-	left: 0;
-	z-index: 10000;
-	display: flex;
-	align-items: center;
-}
 
-.whatsapp-box {display: none;}
-.whatsapp-box .box-light {min-width: 300px;}
 .whatsapp-box header {text-transform: uppercase; padding-bottom: 20px; margin-bottom: 20px; border-bottom: 1px solid #CCC;}
 .whatsapp-box header i {color: #34af23; font-size: 60px;}
 .whatsapp-box header h4 span {font-weight: 700 !important; /*color: #bf262b;*/}
-.whatsapp-box:after {content: ""; display: block; clear: both;}
 
-.mask {
-	width: 100%;
-	height: 100%;
-	background: rgba(0,0,0,0.85);
-	position: absolute;
-}
-
-.lightbox .box-light {
-	background: #FFF;
-	padding: 30px;
-	color: #000;
-	z-index: 11000;
-}
-
-.lightbox .box-light article p {
-	display: block;
-	margin-bottom: 10px;
-}
 
 .center {
 	float: none !important;
 	margin: 0 auto;
 }
 
-.close-box {
-	width: 25px;
-	height: 25px;
-	display: block;
-	position: absolute;
-	cursor: pointer;
-	top: -12px;
-	right: -12px;
-	background: url('../img/btn-close.png') no-repeat center;
-}
 
-.scroll-text {height: 400px}
-.scroll-text h2 {
+.box-text {height: 400px}
+.box-text h2 {
 	text-transform: uppercase;
 	font-weight: 700 !important;
 	font-size: 28px;
 	color: #bf262b;
 	margin-bottom: 30px;
 }
+
+.box-text a {color: #bf262b;}
 
 .col-20 {
 	width: 20%;
@@ -780,9 +733,11 @@ footer#site ul:after,
 
 @media only screen and (max-width: 769px) {
 
-	.slidehome {
-		height: 600px;
-	}
+	
+	#homeslide,
+	#homeslide .container,
+	#homeslide .row {height: 700px;}
+	
 	.content-site {
 		height: auto !important;
 	}

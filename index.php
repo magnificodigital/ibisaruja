@@ -2,104 +2,95 @@
 <html lang="pt-br">
 	<head>
 
-		<?php wp_head(); ?>
-
 		<meta charset="utf-8">
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 
-		<title><?php bloginfo('name') ?></title>
-		<link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/main.css">
-		<link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/bootstrap.css">
-		<link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/swiper.min.css">		
-		<link rel="shortcut icon" href="<?php bloginfo('template_url') ?>/img/favicon.png">
+		<title><?php echo get_bloginfo('name') ?></title>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">	
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+		<link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/main.css">
 
-		<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		<!--[if lt IE 9]>
-		<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-		<![endif]-->
+		<link rel="shortcut icon" href="<?php bloginfo('template_url') ?>/img/favicon.png">
 
-		<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/jquery-3.1.1.min.js"></script>
-		<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/jquery.scrollTo.js"></script>
-		<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/swiper.min.js"></script>
-		<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/swiper.jquery.min.js"></script>
+		<style type="text/css">	
+			div#conversion-hotel-ibis-0170bafa40236b4788db.wrapper,
+			div#conversion-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b.wrapper,
+			div#conversion-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871.wrapper {background: transparent !important;}
 
-		<!--fancybox-->
-		<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/fb/lib/jquery.mousewheel-3.0.6.pack.js"></script>
-		<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/fb/source/jquery.fancybox.js?v=2.1.5"></script>
-		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url') ?>/js/fb/source/jquery.fancybox.css?v=2.1.5" media="screen" />
-		<link rel="stylesheet" type="text/css" href="<?php bloginfo('template_url') ?>/js/fb/source/helpers/jquery.fancybox-buttons.css?v=1.0.5" />
-		<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/fb/source/helpers/jquery.fancybox-buttons.js?v=1.0.5"></script>
-		<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/fb/source/helpers/jquery.fancybox-thumbs.js?v=1.0.7"></script>
-		<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/fb/source/helpers/jquery.fancybox-media.js?v=1.0.6"></script>
-		<!--
-		<script type="text/javascript">
-			window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
-			d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
-			_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute("charset","utf-8");
-			$.src="//v2.zopim.com/?3ouh11f0fCCct6Rpb5sJQvduUHHR3yKM";z.t=+new Date;$.
-			type="text/javascript";e.parentNode.insertBefore($,e)})(document,"script");
+			#form-container-hotel-ibis-0170bafa40236b4788db #conversion-hotel-ibis-0170bafa40236b4788db section,
+			#form-container-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b #conversion-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b section {margin-left: -20px !important;}
+			#conversion-hotel-ibis-0170bafa40236b4788db form input,
+			#conversion-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b form input,
+			#conversion-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 form input,
+			#form-hotel-ibis-formulario-whatsapp-366e68e297da517f6691 form input {
+				border: 0 !important;
+				padding: 10px !important;
+				border-radius: 0 !important;
+				font-size: 24px;
 
-			function openChat(){
-				$zopim.livechat.window.show();
 			}
-		</script>
-		-->
-		<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/main.js"></script>
-		<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/subscribe.js"></script>
-		<script type="text/javascript">
-			$(document).ready(function() {
-				$('.fancybox').fancybox({
-					padding: 10,
-					helpers: {
-						overlay: {
-								locked: false
-							}
-						}
-				});
-			});
-		</script>
 
-        <!-- Início do script Omnize -->
-		<script>document.addEventListener('DOMContentLoaded',function(){var JSLink=location.protocol+'//widget.omnize.com',JSElement=document.createElement('script');JSElement.async=!0;JSElement.charset='UTF-8';JSElement.src=JSLink;JSElement.onload=OnceLoaded;document.getElementsByTagName('body')[0].appendChild(JSElement);function OnceLoaded(){wOmz.init({id:3666});}},false);</script> 
+			#form-hotel-ibis-formulario-whatsapp-366e68e297da517f6691 form input {background: #EEE !important;}
 
-		<!--Google Analytics-->
-		<script>
-		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+			#form-container-hotel-ibis-0170bafa40236b4788db #conversion-hotel-ibis-0170bafa40236b4788db #conversion-form-hotel-ibis-0170bafa40236b4788db div.actions input.call_button,
+			#form-container-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b #conversion-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b #conversion-form-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b div.actions input.call_button,
+			#form-container-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 #conversion-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 #conversion-form-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 div.actions input.call_button {border-radius: 0 !important; border: 0 !important; box-shadow: none !important;}
+			#conversion-modal-hotel-ibis-0170bafa40236b4788db .modal-content section div.actions, #conversion-hotel-ibis-0170bafa40236b4788db section div.actions,
+			#conversion-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b section div.actions,
+			#conversion-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 section div.actions {padding: 0px 0 8px 0!important;}
+			#form-hotel-ibis-0170bafa40236b4788db *,
+			#form-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b *,
+			#form-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 *,
+			#form-hotel-ibis-formulario-whatsapp-366e68e297da517f6691 * {font-family: 'Open Sans', sans-serif !important;}
 
-		  ga('create', 'UA-88643942-1', 'auto');
-		  ga('send', 'pageview');
+			#form-container-hotel-ibis-formulario-whatsapp-366e68e297da517f6691 #conversion-hotel-ibis-formulario-whatsapp-366e68e297da517f6691 section {padding: 20px 0 !important;}
 
-		</script>
+		</style>
 
+		<?php wp_head(); ?>
 		
 	</head>
-<body>
+<body <?php body_class() ?>>
 
-<div class="lightbox material-publicitario">
-	<div class="mask"></div>
-	<div class="container">
-		<div class="box-light col-md-6 center">
-			<span class="close-box"></span>
-				<div class="scroll-text">
-					<article>
-						<?php //aqui é 39 ?>
-						<?php $post_id = 39;  //id da pagina "material publicitario"
-						$queried_post = get_post($post_id);
-						$title = $queried_post->post_title;
-						// exibe titulo echo $title;?>
-						<h2><?php echo $title; ?></h2>
-						<p><?php echo $queried_post->post_content ?></p>									
-					</article>	
+<div style="display: none; max-width: 400px; margin-left: 20px; margin-right: 20px;" id="materialpublicitario">
+	<article class="box-text">
+		<?php //aqui é 39 ?>
+		<?php $post_id = 39;  //id da pagina "material publicitario"
+		$queried_post = get_post($post_id);
+		$title = $queried_post->post_title;
+		// exibe titulo echo $title;?>
+		<h2><?php echo $title; ?></h2>
+		<p><?php echo $queried_post->post_content ?></p>
+	</article>
+</div>
+
+<div style="display: none; max-width: 400px; min-height: 450px; margin-left: 20px; margin-right: 20px;" id="whatsappbox">		
+	<div class="whatsapp-box">
+		<header>
+			<div class="row">
+				<div class="col-xs-3">
+					<i class="fa fa-whatsapp"></i>
+				</div>
+				<div class="col-xs-9">
+					<h4>Atendimento via <span>Whatsapp</span></h4>
 				</div>
 			</div>
-		</div>
+		</header>
+		<section>
+			<div class="row">
+				<div class="col-xs-12">
+					<div id="hotel-ibis-formulario-whatsapp-366e68e297da517f6691"></div>
+					<script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
+					<script type="text/javascript">
+					  new RDStationForms('hotel-ibis-formulario-whatsapp-366e68e297da517f6691-html', 'UA-47651710-1').createForm();
+					</script>
+				</div>
+			</div>
+		</section>
 	</div>
 </div>
 
@@ -113,7 +104,7 @@
 					</h1>
 				</a>
 				<ul>
-					<li><a href="#home-slide">Home</a></li>
+					<li><a href="#homeslide">Home</a></li>
 					<li><a href="#enterprise-content">Empreendimento</a></li>
 					<li><a href="#location-content">Localização</a></li>
 					<li><a href="#advantages-content">Invista</a></li>
@@ -121,7 +112,7 @@
 					<li><a href="#faq-content">FAQ</a></li>
 					<li><a href="#leaders-content">Realização</a></li>
 					<li><a href="#contact-content">Contato</a></li>
-					<li class="pull-right"><span class="open-material">Material publicitário</span></li>
+					<li class="pull-right"><a data-fancybox data-src="#materialpublicitario" href="javascript:;"><span class="open-material">Material publicitário</span></a></li>
 				</ul>
 			</nav>
 
@@ -136,13 +127,14 @@
 				</a>
 			</div>
 			<div class="col-xs-7" style="text-align: center;">
-				<div class="row"><span class="link-advertising open-lightbox"><a href="">Material publicitário</a></span></div>
+				<div class="row"><span class="link-advertising open-lightbox"><a data-fancybox data-src="#materialpublicitario" href="javascript:;">Material publicitário</a></span></div>
 				<div class="row">
-				<span class="menu-anchor"><span>MENU</span> <i class="fa fa-bars" aria-hidden="true"></i></span></div>
+				<span class="menu-anchor"><span>MENU</span><i class="fa fa-bars" aria-hidden="true"></i></span>
+				</div>
 			</div>
 		</div>
 		<ul>
-			<li><a href="#home-slide">Home</a></li>
+			<li><a href="#homeslide">Home</a></li>
 			<li><a href="#enterprise-content">Empreendimento</a></li>
 			<li><a href="#location-content">Localização</a></li>
 			<li><a href="#advantages-content">Invista</a></li>
@@ -154,36 +146,29 @@
 	</nav>
 </header>
 
-<main id="content-site">
 <!--primeira secao-->
-<section id="home-slide" class="content-site">
-	<div class="swiper-container slidehome">
-		<div class="swiper-wrapper">
-			<div class="swiper-slide" style="background: url('<?php bloginfo('template_url') ?>/img/slide1.jpg'); background-size: cover;">Teste</div>
-		</div>
-		<div class="container">
-			<div class="row">
-				<section class="newsletter-box box-content col-lg-5 col-md-7 col-sm-12 col-xs-12">
-					<header>
-						<h2><strong>Invista em um hotel</strong> de marca <strong>reconhecida internacionalmente</strong></h2>
-						<h3><strong>Cadastre-se</strong> e saiba como</h3>
-					</header>
+<section id="homeslide" class="content-site">
+	<div class="container">
+		<div class="row">
+			<section class="newsletter-box box-content col-lg-5 col-md-7 col-sm-12 col-xs-12">
+				<header>
+					<h2><strong>Invista em um hotel</strong> de marca <strong>reconhecida internacionalmente</strong></h2>
+					<h3><strong>Cadastre-se</strong> e saiba como</h3>
+				</header>
 
-					<div id="hotel-ibis-0170bafa40236b4788db"></div>
-					<script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
-					<script type="text/javascript">
-					  new RDStationForms('hotel-ibis-0170bafa40236b4788db-html', 'UA-47651710-1').createForm();
-					</script>
+				<div id="hotel-ibis-0170bafa40236b4788db"></div>
+				<script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
+				<script type="text/javascript">
+				  new RDStationForms('hotel-ibis-0170bafa40236b4788db-html', 'UA-47651710-1').createForm();
+				</script>
 
-				</section>
-			</div>
+			</section>
 		</div>
-	</div>
-	
+	</div>	
 </section>
 
 <!--segunda secao-->
-<section id="enterprise-content" class="content-site bgParallax" data-speed="10">
+<section id="enterprise-content" class="content-site">
 	<div class="container">
 		<div class="row">
 			<section class="newsletter-box box-content col-lg-5 col-md-7 col-sm-12 col-xs-12">
@@ -237,7 +222,6 @@
 		<div class="swiper-container galery-enterprise" >
 			<div class="swiper-wrapper">
 
-				<!--galeria-->
 				<?php $args = array(
 					'post_type' => 'galeria',
 					'orderby' => 'date',
@@ -248,14 +232,16 @@
 
 				<?php query_posts($args); ?>		
 				<?php if (have_posts()): while (have_posts()): the_post(); ?>
-				
+
 				<div class="swiper-slide">
-					<a href="<?php the_post_thumbnail_url('galery-big-photo'); ?>" data-fancybox-group="gallery1" class="fancybox" title="">
-					<?php the_post_thumbnail('galery-small-photo');  ?></a>
+					<a href="<?php the_post_thumbnail_url('galery-big-photo'); ?>" data-fancybox="gallery1" title="Legenda">
+						<?php the_post_thumbnail('galery-small-photo'); ?>
+					</a>
 				</div>
 
 				<?php endwhile; endif;?>
-				<!--fim galeria-->		
+
+	
 			</div>
 
 			<div class="swiper-button-prev swiper-button-white"></div>
@@ -266,7 +252,7 @@
 </div>
 
 <!--vantagens-->
-<section id="location-content" class="content-site bgParallax" data-speed="10">
+<section id="location-content" class="content-site">
 	<div class="container">
 		<div class="box-content">
 			<div class="row">
@@ -529,7 +515,6 @@ os outros investidores. <strong>A receita não vem somente das locações dos qu
 		</section>
 	</div>
 </section>
-</main>
 <footer id="site">
 	<div class="container">
 		<div class="row">
@@ -538,7 +523,7 @@ os outros investidores. <strong>A receita não vem somente das locações dos qu
 				<li class="col-20"><a href="http://www.ekoconstrutora.com.br/fale-conosco/" class="ico-mail" target="_blank"><p>Atendimento <span>por e-mail</span></p></a></li>
 				<li class="col-20"><a href="http://www.ekoconstrutora.com.br/ligamos-para-voce/" class="ico-tel" target="_blank"><p>Ligamos <span>para você</span></p></a></li>
 				<li class="col-20"><a href="http://www.ekoconstrutora.com.br/agende-uma-visita/" class="ico-agenda" target="_blank"><p>Agende <span>uma visita</span></p></a></li>
-				<li class="col-20"><a href="javascript:void(0);" class="ico-whatsapp open-whatsapp" target="_blank"><p>Atendimento <span>via whatsapp</span></p></a></li>
+				<li class="col-20"><a data-fancybox data-src="#whatsappbox" href="javascript:;" class="ico-whatsapp" target="_blank"><p>Atendimento <span>via whatsapp</span></p></a></li>
 				<!--
 				<li class="col-md-2 chat-online"><a href="javascript:openChat()" class="" target="_blank"><p>Atendimento <span>online</span></p></a></li>-->
 			</ul>
@@ -548,43 +533,61 @@ os outros investidores. <strong>A receita não vem somente das locações dos qu
 </footer>
 
 
-<div class="lightbox whatsapp-box">
-	<div class="mask"></div>
-	<div class="container">
-		<div class="row">
-			<div class="box-light col-md-12 center">
-
-				<header>
-					<div class="row">
-						<div class="col-xs-3">
-							<i class="fa fa-whatsapp"></i>
-						</div>
-						<div class="col-xs-9">
-							<h4>Atendimento via <span>Whatsapp</span></h4>
-						</div>
-					</div>
-				</header>
-				<section>
-					<div class="row">
-						<div class="col-xs-12">
-							<div id="hotel-ibis-formulario-whatsapp-366e68e297da517f6691"></div>
-							<script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
-							<script type="text/javascript">
-							  new RDStationForms('hotel-ibis-formulario-whatsapp-366e68e297da517f6691-html', 'UA-47651710-1').createForm();
-							</script>
-						</div>
-					</div>
-				</section>
 
 
-				<span class="close-box"></span>
-			</div>
-		</div>
-	</div>
-</div>
+
+<!--
+<script type="text/javascript">
+    var meus_campos = {
+        'nome': 'nome',
+        'email': 'email',
+        'tel': 'telefone'
+     };
+    options = { fieldMapping: meus_campos };
+    RdIntegration.integrate('5bc74d9a15dc71ab1bd0bc162ae544d5', 'IBIS - Contato', options);  
+</script>-->
+
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/jquery-3.1.1.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/jquery.scrollTo.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/swiper.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/swiper.jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/main.js"></script>
+<script type="text/javascript">
+	$('[data-fancybox]').fancybox({
+
+		youtube : {
+			controls : 1,
+			showinfo : 0
+		}
+	});
+</script>
+
+<script>document.addEventListener('DOMContentLoaded',function(){var JSLink=location.protocol+'//widget.omnize.com',JSElement=document.createElement('script');JSElement.async=!0;JSElement.charset='UTF-8';JSElement.src=JSLink;JSElement.onload=OnceLoaded;document.getElementsByTagName('body')[0].appendChild(JSElement);function OnceLoaded(){wOmz.init({id:3666});}},false);
+</script> 
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-88643942-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
 
 <script type="text/javascript">
-
 
 	var slider = new Swiper('.slidehome', {
 	    loop:true,
@@ -623,51 +626,24 @@ os outros investidores. <strong>A receita não vem somente das locações dos qu
 
 </script>
 
-
-<!--
 <script type="text/javascript">
-    var meus_campos = {
-        'nome': 'nome',
-        'email': 'email',
-        'tel': 'telefone'
-     };
-    options = { fieldMapping: meus_campos };
-    RdIntegration.integrate('5bc74d9a15dc71ab1bd0bc162ae544d5', 'IBIS - Contato', options);  
-</script>-->
+	//Paralaxx
+	$(function(){
 
-<style type="text/css">
-	
-	div#conversion-hotel-ibis-0170bafa40236b4788db.wrapper,
-	div#conversion-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b.wrapper,
-	div#conversion-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871.wrapper {background: transparent !important;}
+		if ($(window).width() > 767) {
+			$('.bgParallax').each(function(){
+				var $obj = $(this);
+				$(window).scroll(function() {
+					var yPos = -($(window).scrollTop() / $obj.data('speed')); 
+					var bgpos = '50% '+ yPos + 'px';
+					$obj.css('background-position', bgpos );
+				});
+			});	
+		}
+	});
 
-	#form-container-hotel-ibis-0170bafa40236b4788db #conversion-hotel-ibis-0170bafa40236b4788db section,
-	#form-container-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b #conversion-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b section {margin-left: -20px !important;}
-	#conversion-hotel-ibis-0170bafa40236b4788db form input,
-	#conversion-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b form input,
-	#conversion-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 form input,
-	#form-hotel-ibis-formulario-whatsapp-366e68e297da517f6691 form input {
-		border: 0 !important;
-		padding: 10px !important;
-		border-radius: 0 !important;
-		font-size: 24px;
 
-	}
-
-	#form-hotel-ibis-formulario-whatsapp-366e68e297da517f6691 form input {background: #EEE !important;}
-
-	#form-container-hotel-ibis-0170bafa40236b4788db #conversion-hotel-ibis-0170bafa40236b4788db #conversion-form-hotel-ibis-0170bafa40236b4788db div.actions input.call_button,
-	#form-container-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b #conversion-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b #conversion-form-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b div.actions input.call_button,
-	#form-container-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 #conversion-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 #conversion-form-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 div.actions input.call_button {border-radius: 0 !important; border: 0 !important; box-shadow: none !important;}
-	#conversion-modal-hotel-ibis-0170bafa40236b4788db .modal-content section div.actions, #conversion-hotel-ibis-0170bafa40236b4788db section div.actions,
-	#conversion-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b section div.actions,
-	#conversion-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 section div.actions {padding: 0px 0 8px 0!important;}
-	#form-hotel-ibis-0170bafa40236b4788db *,
-	#form-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b *,
-	#form-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 *,
-	#form-hotel-ibis-formulario-whatsapp-366e68e297da517f6691 * {font-family: 'Open Sans', sans-serif !important;}
-
-</style>
+</script>
 
 <?php wp_footer();?>
 
