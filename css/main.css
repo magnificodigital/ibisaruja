@@ -63,7 +63,6 @@ header#top-site {
 	width: 100%;
 	background: #FFF;
 	position: fixed;
-	top: 0;
 	z-index: 500 !important;
 	-webkit-box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.10);
 	-moz-box-shadow: 0px 5px 16px 0px rgba(0,0,0,0.10);
@@ -367,6 +366,15 @@ nav.menu-mobile ul li a:hover {
 	position: relative;
 }
 
+.galery-enterprise .swiper-slide {
+	transition: 0.3s;
+	-webkit-transition: 0.3s;
+	-moz-transition: 0.3s;
+	-ms-transition: 0.3s;
+	-o-transition: 0.3s;
+}
+.galery-enterprise .swiper-slide:hover {opacity: 0.75;}
+
 #location-content header a {
 	color: #FFF !important;
 	text-decoration: underline;
@@ -416,6 +424,8 @@ nav.menu-mobile ul li a:hover {
 #advantages-content .reasons-content header h2 {
 	color: #FFFFFF !important;
 	text-transform: uppercase;
+	margin-top: 0;
+	margin-bottom: 0;
 }
 
 #advantages-content .box-content {padding-bottom: 100px;}
@@ -531,6 +541,14 @@ nav.menu-mobile ul li a:hover {
 
 .partner h4 {
 	text-align: center;
+}
+
+.partner p {
+	font-size: 16px;
+}
+
+.partner article {
+	margin-top: 10px;
 }
 
 #contact-content h3 {

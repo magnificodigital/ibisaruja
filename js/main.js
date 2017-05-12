@@ -54,7 +54,7 @@ $(function(){
 //Troca telefone
 $(function(){
 	$('.open-tel').on("click",function(){
-		$(this).text("0000-0000");
+		$(this).text("(11) 4655-8022");
 	});
 });
 
