@@ -98,8 +98,6 @@
 						<img src="<?php bloginfo('template_url') ?>/img/logo-ibis.png" alt="<?php bloginfo('name') ?>" title="<?php bloginfo('name') ?>">
 					</h1>
 				</a>
-
-
 				<ul>
 					<?php
 						$args = array(
@@ -113,10 +111,7 @@
 					?>
 					<li><a data-fancybox data-src="#materialpublicitario" href="javascript:;"><span class="open-material">Material publicitário</span></a></li>
 				</ul>
-				
-
 			</nav>
-
 		</div>
 	</div>
 
@@ -211,7 +206,7 @@
 						<li><a href="<?php the_field('compromisso_de_venda_e_compra'); ?>" target="_blank">Compromisso de Venda e Compra</a></li>
 						<li><a href="<?php the_field('compromisso_de_venda_e_compra_-_quadro_resumido'); ?>" target="_blank">Compromisso de Venda e Compra - Quadro Resumido</a></li>
 						<li><a href="<?php the_field('declaração_do_investidor_adquirente'); ?>" target="_blank">Declaração do Investidor Adquirente</a></li>
-						<li><a href="<?php the_field('contratos_de_investimento_coletivo_no_empreendimento_compilado'); ?>" target="_blank">Contratos de Investimento Coletivo no Empreendimento Compilado</a></li>
+						<!--<li><a href="<?php the_field('contratos_de_investimento_coletivo_no_empreendimento_compilado'); ?>" target="_blank">Contratos de Investimento Coletivo no Empreendimento Compilado</a></li>-->
 						<li><a href="<?php the_field('declaração_para_fins_do_artigo_56_da_instrução_cvm_400'); ?>" target="_blank">Declaração para Fins do Artigo 56 da Instrução CVM 400</a></li>
 					</ul>
 				</div>
@@ -319,25 +314,7 @@ Ayrton Senna, Fernão Dias e Rodoanel">
 				</header>
 			</div>
 			<article class="row">
-				
 				<?php the_field('vantagens_de_investir'); ?>
-
-				
-				<!--
-				<div class="col-md-4">
-					<p>O investimento no setor hoteleiro se transformou em uma boa opção de investimento, propiciando ao investidor segurança patrimonial.</p>
-					<p>Adquirindo uma unidade em um hotel, o investidor não precisa se preocupar com a manutenção do imóvel, ou inadimplência e ainda possibilita a valorização patrimonial de um imóvel comercial de alto padrão. </p>
-				</div>
-
-				<div class="col-md-4">
-					<p>O que faz do Hotel uma forma de investimento tão atrativa é que a modalidade combina a possibilidade de se obter uma boa rentabilidade com segurança do capital investido. As unidades são registradas em propriedade horizontal e as escrituras no nome de proprietário.</p>
-					<p><strong><i>Não há garantia de que o retorno financeiro atenderá as projeções inicialmente realizadas.</i></strong></p>
-				</div>
-
-				<div class="col-md-4">
-					<p>O investidor que adquirir uma unidade, recebe em quantia igual dividida entre os outros investidores, o lucro que o hotel obteve. A receita não vem somente das locações dos quartos, mas sim de todos os serviços que fazem parte do empreendimento hoteleiro: como Restaurante, Bar, lavanderia, estacionamento, etc... </p>
-					<p><strong><i>A operação hoteleira do empreendimento pode apresentar prejuízo no fluxos de caixa negativos por um período indeterminado.</i></strong></p>
-				</div>-->
 			</article>
 		</section>
 	</div>
@@ -618,9 +595,9 @@ Ayrton Senna, Fernão Dias e Rodoanel">
 
 	var slider = new Swiper('.galery-enterprise', {
 	    spaceBetween: 30,
-	    loop:false,
+	    loop:true,
 	    slidesPerView: 3,
-	    autoplay: 4000,
+	    autoplay: 3000,
         nextButton: '.swiper-button-next',
         prevButton: '.swiper-button-prev',
 	    breakpoints: {

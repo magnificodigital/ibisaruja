@@ -440,7 +440,8 @@ nav.menu-mobile ul li a:hover {
 	list-style: none;
 	text-align: center;
 	color: #3aa058;
-	cursor: pointer;
+	font-size: 16px;
+	/*cursor: pointer;*/
 	transition: 0.5s;
 	-webkit-transition: 0.5s;
 	-moz-transition: 0.5s;
