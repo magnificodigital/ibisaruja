@@ -244,7 +244,7 @@
 
 						<div class="swiper-slide">
 							<a href="<?php echo $full_image_url; ?>" data-fancybox="gallery1" title="">
-								<img src="<?php echo $thumbnail_image_url; ?>" />
+								<img src="<?php echo $thumbnail_image_url; ?>" alt="Foto Galeria Ibis" title="Foto Galeria Ibis" />
 							</a>
 						</div>
 
