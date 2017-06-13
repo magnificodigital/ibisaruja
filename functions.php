@@ -1,5 +1,31 @@
 <?php 
 
+//Thubmnails
+add_theme_support('post-thumbnails');
+add_image_size('galery-big-photo', 900, false);
+add_image_size('galery-small-photo', 370, 220, true);
+
+// Mover os scripts para o footer
+function remove_head_scripts() { 
+   remove_action('wp_head', 'wp_print_scripts'); 
+   remove_action('wp_head', 'wp_print_head_scripts', 9); 
+   remove_action('wp_head', 'wp_enqueue_scripts', 1);
+
+   add_action('wp_footer', 'wp_print_scripts', 5);
+   add_action('wp_footer', 'wp_enqueue_scripts', 5);
+   add_action('wp_footer', 'wp_print_head_scripts', 5); 
+} 
+add_action( 'wp_enqueue_scripts', 'remove_head_scripts' );
+
+
+//Menu
+function register_my_menu() {
+  register_nav_menu('header-menu',__( 'Menu' ));
+}
+add_action( 'init', 'register_my_menu' );
+
+
+/*
 add_action('wp_enqueue_scripts', 'meu_tema_enqueue_scripts');
 function meu_tema_enqueue_scripts() {
 	wp_enqueue_script('scripts', get_template_directory_uri()."/js/scripts.js", array('jquery'));
@@ -37,29 +63,7 @@ function funcao_da_minha_acao_ajax() {
 
 	wp_die();
 
-}
+} */
 
-//Thubmnails
-add_theme_support('post-thumbnails');
-add_image_size('galery-big-photo', 900, false);
-add_image_size('galery-small-photo', 370, 220, true);
-
-// Mover os scripts para o footer
-function remove_head_scripts() { 
-   remove_action('wp_head', 'wp_print_scripts'); 
-   remove_action('wp_head', 'wp_print_head_scripts', 9); 
-   remove_action('wp_head', 'wp_enqueue_scripts', 1);
-
-   add_action('wp_footer', 'wp_print_scripts', 5);
-   add_action('wp_footer', 'wp_enqueue_scripts', 5);
-   add_action('wp_footer', 'wp_print_head_scripts', 5); 
-} 
-add_action( 'wp_enqueue_scripts', 'remove_head_scripts' );
-
-
-//Menu
-function register_my_menu() {
-  register_nav_menu('header-menu',__( 'Menu' ));
-}
-add_action( 'init', 'register_my_menu' );
+?>
 

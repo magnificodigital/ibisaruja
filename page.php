@@ -8,12 +8,8 @@
 
 		<title><?php echo get_bloginfo('name') ?></title>
 
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css">	
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
-		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.css" />
+		<link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/frameworks.css">
 		<link rel="stylesheet" href="<?php bloginfo('template_url') ?>/css/main.css">
-
 		<link rel="shortcut icon" href="<?php bloginfo('template_url') ?>/img/favicon.png">
 
 		<style type="text/css">	
@@ -56,14 +52,14 @@
 	</head>
 <body <?php body_class() ?>>
 
-<div style="display: none; max-width: 550px; margin-left: 20px; margin-right: 20px;" id="materialpublicitario">
+<div id="materialpublicitario">
 	<article class="box-text">
 		<h2>MATERIAL PUBLICITÁRIO</h2>
 		<p><?php the_field('material_publicitario') ?></p>
 	</article>
 </div>
 
-<div style="display: none; max-width: 400px; min-height: 450px; margin-left: 20px; margin-right: 20px;" id="whatsappbox">		
+<div id="whatsappbox">		
 	<div class="whatsapp-box">
 		<header>
 			<div class="row">
@@ -79,10 +75,6 @@
 			<div class="row">
 				<div class="col-xs-12">
 					<div id="hotel-ibis-formulario-whatsapp-366e68e297da517f6691"></div>
-					<script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
-					<script type="text/javascript">
-					  new RDStationForms('hotel-ibis-formulario-whatsapp-366e68e297da517f6691-html', 'UA-47651710-1').createForm();
-					</script>
 				</div>
 			</div>
 		</section>
@@ -91,28 +83,27 @@
 
 <header id="top-site">
 	<div class="container">
-		<div class="row">
-			<nav class="menu-desktop">
-				<a href="#homeslide">
-					<h1 title="<?php bloginfo('name') ?>" class="logo">
-						<img src="<?php bloginfo('template_url') ?>/img/logo-ibis.png" alt="<?php bloginfo('name') ?>" title="<?php bloginfo('name') ?>">
-					</h1>
-				</a>
-				<ul>
-					<?php
-						$args = array(
-							'menu'=>'header-menu',
-							'echo' => false,
-							'container' => false,
-							'items_wrap'=>'%3$s'
-						);
-						$menu = wp_nav_menu($args);
-						echo preg_replace(array( '#^<ul [^>]*>#', '#</ul>$#' ), '', $menu );;
-					?>
-					<li><a data-fancybox data-src="#materialpublicitario" href="javascript:;"><span class="open-material">Material publicitário</span></a></li>
-				</ul>
-			</nav>
-		</div>
+		<nav class="menu-desktop">
+			<a href="#homeslide">
+				<h1 title="<?php bloginfo('name'); ?>" class="logo">
+					<?php bloginfo('name'); ?>
+					<img src="<?php bloginfo('template_url') ?>/img/logo-ibis.png" alt="<?php bloginfo('name') ?>" title="<?php bloginfo('name') ?>">
+				</h1>
+			</a>
+			<ul>
+				<?php
+					$args = array(
+						'menu'=>'header-menu',
+						'echo' => false,
+						'container' => false,
+						'items_wrap'=>'%3$s'
+					);
+					$menu = wp_nav_menu($args);
+					echo preg_replace(array( '#^<ul [^>]*>#', '#</ul>$#' ), '', $menu );;
+				?>
+				<li><a data-fancybox data-src="#materialpublicitario" href="javascript:;"><span class="open-material">Material publicitário</span></a></li>
+			</ul>
+		</nav>
 	</div>
 
 	<nav class="menu-mobile">
@@ -122,7 +113,7 @@
 					<img src="<?php bloginfo('template_url'); ?>/img/logos/ibis.png" alt="<?php echo get_bloginfo('name') ?>" title="<?php echo get_bloginfo('name') ?>">
 				</a>
 			</div>
-			<div class="col-xs-7" style="text-align: center;">
+			<div class="col-xs-7 text-center">
 				<div class="row"><span class="link-advertising open-lightbox"><a data-fancybox data-src="#materialpublicitario" href="javascript:;">Material publicitário</a></span></div>
 				<div class="row">
 				<span class="menu-anchor"><span>MENU</span><i class="fa fa-bars" aria-hidden="true"></i></span>
@@ -154,13 +145,7 @@
 					<h2><strong>Invista em um hotel</strong> <br/>com a bandeira<strong> Ibis</strong></h2>
 					<h3><strong>Cadastre-se</strong> e saiba como</h3>
 				</header>
-
 				<div id="hotel-ibis-0170bafa40236b4788db"></div>
-				<script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
-				<script type="text/javascript">
-				  new RDStationForms('hotel-ibis-0170bafa40236b4788db-html', 'UA-47651710-1').createForm();
-				</script>
-
 			</section>
 		</div>
 	</div>	
@@ -176,15 +161,7 @@
 					<h2><strong>Empreendimento</strong></h2>
 					<h3><?php the_field('empreendimento') ?> <small>Dados obtidos em: <a href="http://accorhotels-group.com" target="_blank">accorhotels-group.com</a></small></h3>
 				</header>
-
-
-				<div id="hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b"></div>
-				<script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
-				<script type="text/javascript">
-				  new RDStationForms('hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b-html', 'UA-47651710-1').createForm();
-				</script>
-
-							
+				<div id="hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b"></div>				
 			</section>
 		</div>
 		<div class="row">
@@ -273,30 +250,28 @@
 			</div>
 			<div class="row">
 				<ul>
-					<li class="col-md-2 col-xs-6">
-						<img src="<?php bloginfo('template_url') ?>/img/icons/ponte.png" alt="30 minutos do centro de SP" title="30 minutos do centro de SP">
+					<li class="col-md-2 col-xs-6 reveal-g1">
+						<img src="<?php bloginfo('template_url') ?>/img/icons/ponte.png" alt="30 minutos do centro de SP" title="30 minutos do centro de SP" />
 						<p>30 minutos do <strong>Centro de SP</strong></p>
 					</li>
-					<li class="col-md-2 col-xs-6">
-						<img src="<?php bloginfo('template_url') ?>/img/icons/margens.png" alt="Ás margens da Rodovia Dutra" title="Ás margens da Rodovia Dutra">
+					<li class="col-md-2 col-xs-6 reveal-g1">
+						<img src="<?php bloginfo('template_url') ?>/img/icons/margens.png" alt="Ás margens da Rodovia Dutra" title="Ás margens da Rodovia Dutra" />
 						<p>Ás margens da <strong>Rodovia Dutra</strong></p>
 					</li>
-					<li class="col-md-2 col-xs-6">
-						<img src="<?php bloginfo('template_url') ?>/img/icons/rodovias.png" alt="Acesso á 
-Ayrton Senna, Fernão Dias e Rodoanel" title="Acesso á 
-Ayrton Senna, Fernão Dias e Rodoanel">
+					<li class="col-md-2 col-xs-6 reveal-g1">
+						<img src="<?php bloginfo('template_url') ?>/img/icons/rodovias.png" alt="Acesso á Ayrton Senna, Fernão Dias e Rodoanel" title="Acesso á Ayrton Senna, Fernão Dias e Rodoanel" />
 						<p>Acesso á <strong>Ayrton Senna,<br />Fernão Dias e Rodoanel</strong></p>
 					</li>
-					<li class="col-md-2 col-xs-6">
-						<img src="<?php bloginfo('template_url') ?>/img/icons/navio.png" alt="Próximo aos Portos de Santos e São Sebastião" title="Próximo aos Portos de Santos e São Sebastião">
+					<li class="col-md-2 col-xs-6 reveal-g1">
+						<img src="<?php bloginfo('template_url') ?>/img/icons/navio.png" alt="Próximo aos Portos de Santos e São Sebastião" title="Próximo aos Portos de Santos e São Sebastião" />
 						<p>Próximo aos <strong>Portos de Santos e São Sebastião</strong></p>
 					</li>
-					<li class="col-md-2 col-xs-6">
-						<img src="<?php bloginfo('template_url') ?>/img/icons/industria.png" alt="10 minutos dos Centros Industriais" title="10 minutos dos Centros Industriais">
+					<li class="col-md-2 col-xs-6 reveal-g1">
+						<img src="<?php bloginfo('template_url') ?>/img/icons/industria.png" alt="10 minutos dos Centros Industriais" title="10 minutos dos Centros Industriais" />
 						<p>10 minutos dos <strong>Centros Industriais</strong></p>
 					</li>
-					<li class="col-md-2 col-xs-6">
-						<img src="<?php bloginfo('template_url') ?>/img/icons/aviao.png" alt="20 minutos do Aeroporto Internacional de Guarulhos" title="20 minutos do Aeroporto Internacional de Guarulhos.">
+					<li class="col-md-2 col-xs-6 reveal-g1">
+						<img src="<?php bloginfo('template_url') ?>/img/icons/aviao.png" alt="20 minutos do Aeroporto Internacional de Guarulhos" title="20 minutos do Aeroporto Internacional de Guarulhos." />
 						<p>20 minutos do <strong>Aeroporto Internacional</strong> de Guarulhos.</p>
 					</li>
 				</ul>
@@ -327,11 +302,11 @@ Ayrton Senna, Fernão Dias e Rodoanel">
 			<div class="row">
 				<ol>
 					<li class="col-md-1"></li>
-					<li class="col-md-2"><span>1</span><strong>Sem preocupação</strong> com inquilino e IPTU</li>
-					<li class="col-md-2"><span>2</span><strong>Baixo custo</strong> Operacional</li>
-					<li class="col-md-2"><span>3</span>Perspectiva <strong>de ocupação o ano inteiro</strong></li>
-					<li class="col-md-2"><span>4</span><strong>Localização Previlegiada</strong></li>
-					<li class="col-md-2"><span>5</span><strong>Potencial de</strong> Valorização Imobiliária</li>
+					<li class="col-md-2 reveal-5"><span>1</span><strong>Sem preocupação</strong> com inquilino e IPTU</li>
+					<li class="col-md-2 reveal-5"><span>2</span><strong>Baixo custo</strong> Operacional</li>
+					<li class="col-md-2 reveal-5"><span>3</span>Perspectiva <strong>de ocupação o ano inteiro</strong></li>
+					<li class="col-md-2 reveal-5"><span>4</span><strong>Localização Previlegiada</strong></li>
+					<li class="col-md-2 reveal-5"><span>5</span><strong>Potencial de</strong> Valorização Imobiliária</li>
 					<li class="col-md-1"></li>
 				</ol>
 			</div>
@@ -426,7 +401,7 @@ Ayrton Senna, Fernão Dias e Rodoanel">
 				<div class="partner col-md-12">
 					<div class="row">
 						<div class="col-md-4">
-							<h4><img src="<?php bloginfo('template_url') ?>/img/logos/eko.png" alt="Eko Construtora - Construindo para você" title="Eko Construtora - Construindo para você" /></h4>
+							<h4><a href="http://ekoconstrutora.com.br" target="_blank"><img src="<?php bloginfo('template_url') ?>/img/logos/eko.png" alt="Eko Construtora - Construindo para você" title="Eko Construtora - Construindo para você" /></a></h4>
 						</div>
 						<div class="col-md-8">
 							<article>
@@ -453,7 +428,7 @@ Ayrton Senna, Fernão Dias e Rodoanel">
 				<div class="partner col-md-12">
 					<div class="row">
 						<div class="col-md-4">
-							<h4><img src="<?php bloginfo('template_url') ?>/img/logos/accor.png" alt="Accor" title="Accor" /></h4>
+							<h4><a href="http://accorhotels-group.com" target="_blank"><img src="<?php bloginfo('template_url') ?>/img/logos/accor.png" alt="Accor" title="Accor" /></a></h4>
 						</div>
 						<div class="col-md-8">
 							<article>
@@ -496,14 +471,8 @@ Ayrton Senna, Fernão Dias e Rodoanel">
 					</form>
 					-->
 
-
-					<div id="hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871"></div>
-					<script async type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
-					<script async type="text/javascript">
-						new RDStationForms('hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871-html', 'UA-47651710-1').createForm();
-					</script>
-
-					<div style="padding: 0 20px; width: 100%;">
+					<div id="hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871" class="form"></div>
+					<div class="exibetel">
 						<button type="button" class="open-tel">Clique para <strong>exibir o telefone</strong></button>
 					</div>
 
@@ -516,7 +485,7 @@ Ayrton Senna, Fernão Dias e Rodoanel">
 	<div class="container">
 		<div class="row">
 			<ul>	
-				<li class="col-20 first"><p style="margin: 7px 0;"><strong>Fale conosco</strong></p></li>
+				<li class="col-20 first"><p><strong>Fale conosco</strong></p></li>
 				<li class="col-20"><a href="http://www.ekoconstrutora.com.br/fale-conosco/" class="ico-mail" target="_blank"><p>Atendimento <span>por e-mail</span></p></a></li>
 				<li class="col-20"><a href="http://www.ekoconstrutora.com.br/ligamos-para-voce/" class="ico-tel" target="_blank"><p>Ligamos <span>para você</span></p></a></li>
 				<li class="col-20"><a href="http://www.ekoconstrutora.com.br/agende-uma-visita/" class="ico-agenda" target="_blank"><p>Agende <span>uma visita</span></p></a></li>
@@ -529,37 +498,96 @@ Ayrton Senna, Fernão Dias e Rodoanel">
 
 </footer>
 
-
-
-
-
-<!--
+<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/frameworks.min.js"></script>
+<script type="text/javascript" src="https://d335luupugsy2.cloudfront.net/js/rdstation-forms/stable/rdstation-forms.min.js"></script>
 <script type="text/javascript">
-    var meus_campos = {
-        'nome': 'nome',
-        'email': 'email',
-        'tel': 'telefone'
-     };
-    options = { fieldMapping: meus_campos };
-    RdIntegration.integrate('5bc74d9a15dc71ab1bd0bc162ae544d5', 'IBIS - Contato', options);  
-</script>-->
 
+	//Diminui menu ao rolar
+	$(function(){
+		var logo = $('h1.logo');
+		var menu = $('nav.menu-desktop ul');
+		$(window).scroll(function () { 
+			if ($(this).scrollTop() > 50) { 
+				logo.addClass('scroll');
+				menu.addClass('scroll');
+			} else { 
+				logo.removeClass('scroll');
+				menu.removeClass('scroll');
+			} 
+		});
+	});
 
-<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-<!--[if lt IE 9]>
-<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-<![endif]-->
+	//Menu
+	$(function(){
+		$('.menu-anchor').on('click', function(){
+		    $('nav.menu-mobile ul').slideToggle("fast",function(){
+				$('main#content-site').on('click', function(){
+					$('nav.menu-mobile ul').slideUp("fast");
+				});
+		    });
+		});
+	});
 
-<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/jquery-3.1.1.min.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/jquery.scrollTo.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/swiper.min.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/swiper.jquery.min.js"></script>
-<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.0.47/jquery.fancybox.min.js"></script>
-<script type="text/javascript" src="<?php bloginfo('template_url') ?>/js/main.js"></script>
-<script type="text/javascript">
-	
+	//scroll
+	$(function(){
+		var elements = $('nav.menu-desktop a, nav.menu-mobile a');
+		elements.click(function(e){
+			var offThis = $(this.hash).offset().top;
+			var alturaHeader = $('header#top-site').outerHeight();
+			var menuScroll = offThis - alturaHeader;
+			$.scrollTo((menuScroll) || 0, 500);
+			e.preventDefault();
+			if ($(window).width() <= 768) {$('.menu-mobile ul').slideUp();}
+		});
+	});
+
+	//faq
+	$(function(){
+		$('#faq-itens ul li').click(function(){
+			$(this).find('div.dropdown').slideToggle("fast");
+		});
+	});
+
+	//Troca telefone
+	$(function(){
+		$('.open-tel').on("click",function(){
+			$(this).text("(11) 4655-8022");
+		});
+	});
+
+	//abre lightbox quando clica
+	$(function(){
+		$('.open-material').on('click',function(){
+			$('.material-publicitario').fadeIn('fast',function(){
+				$('.close-box, .mask').on('click',function(){
+					$('.material-publicitario').fadeOut();
+				});
+			});
+		});
+	});
+
+	//material publicitario
+	$(document).ready(function(){
+		$('.material-publicitario').fadeIn('fast',function(){
+			$('.close-box, .mask').on('click',function(){
+				$('.material-publicitario').fadeOut();
+			});
+		});
+	});
+
+	//whatsapp form
+	$(function(){
+		$('.open-whatsapp').click(function(e){
+			$('.whatsapp-box').fadeIn('fast',function(){
+				$(this).css({'display':'flex'});
+				$('.close-box, .mask').on('click',function(){
+					$('.whatsapp-box').fadeOut();
+				});
+			});
+			e.preventDefault();
+		});
+	});
+
 	$(document).ready(function(){
 		$('[data-fancybox]').fancybox();	
 		$.fancybox.open({
@@ -567,27 +595,21 @@ Ayrton Senna, Fernão Dias e Rodoanel">
 			type : 'inline',
 		});
 	});
-	
-</script>
 
-<script>document.addEventListener('DOMContentLoaded',function(){var JSLink=location.protocol+'//widget.omnize.com',JSElement=document.createElement('script');JSElement.async=!0;JSElement.charset='UTF-8';JSElement.src=JSLink;JSElement.onload=OnceLoaded;document.getElementsByTagName('body')[0].appendChild(JSElement);function OnceLoaded(){wOmz.init({id:3666});}},false);
-</script> 
+	//Chat
+	document.addEventListener('DOMContentLoaded',function(){var JSLink=location.protocol+'//widget.omnize.com',JSElement=document.createElement('script');JSElement.async=!0;JSElement.charset='UTF-8';JSElement.src=JSLink;JSElement.onload=OnceLoaded;document.getElementsByTagName('body')[0].appendChild(JSElement);function OnceLoaded(){wOmz.init({id:3666});}},false);
 
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+	//Google Analytics
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
 
-  ga('create', 'UA-88643942-1', 'auto');
-  ga('send', 'pageview');
-
-</script>
+	ga('create', 'UA-88643942-1', 'auto');
+	ga('send', 'pageview');
 
 
-
-<script async type="text/javascript">
-
+	//Slides
 	var slider = new Swiper('.slidehome', {
 	    loop:true,
 	    effect:'fade'
@@ -603,46 +625,54 @@ Ayrton Senna, Fernão Dias e Rodoanel">
 	    breakpoints: {
             1199: {
                 slidesPerView: 3,
-                //spaceBetween: 40
             },
             768: {
                 slidesPerView: 2,
-                //spaceBetween: 30
             },
              480: {
                 slidesPerView: 1,
-                //spaceBetween: 
             }
         }
 	});
 
-	/*
-	var swiper = new Swiper('.scroll-text', {
-        scrollbar: '.swiper-scrollbar',
-        direction: 'vertical',
-        slidesPerView: 'auto',
-        mousewheelControl: true,
-        freeMode: true
-    });*/
+	//Forms RD
+	new RDStationForms('hotel-ibis-formulario-whatsapp-366e68e297da517f6691-html', 'UA-47651710-1').createForm();
+	new RDStationForms('hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871-html', 'UA-47651710-1').createForm();
+	new RDStationForms('hotel-ibis-0170bafa40236b4788db-html', 'UA-47651710-1').createForm();
+	new RDStationForms('hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b-html', 'UA-47651710-1').createForm();
 
-</script>
-
-<script async type="text/javascript">
-	//Paralaxx
-	$(function(){
-
-		if ($(window).width() > 767) {
-			$('.bgParallax').each(function(){
-				var $obj = $(this);
-				$(window).scroll(function() {
-					var yPos = -($(window).scrollTop() / $obj.data('speed')); 
-					var bgpos = '50% '+ yPos + 'px';
-					$obj.css('background-position', bgpos );
-				});
-			});	
-		}
+	//Reveal
+	window.sr = ScrollReveal({
+		origin: 'bottom',
+		distance: '10px',
+		duration: 1000,
+		delay: 0,
+		rotate: { x: 0, y: 0, z: 0 },
+		opacity: 0,
+		scale: 1,
+		easing: 'cubic-bezier(0.6, 0.2, 0.1, 1)',
+		container: window.document.documentElement,
+		mobile: true,
+		reset: false,
+		useDelay: 'once',
+		viewFactor: 0.2,
+		viewOffset: { top: 0, right: 0, bottom: 200, left: 0 },
 	});
+	sr.reveal('.reveal-g1',50);
+	sr.reveal('.reveal-5',50);
+	sr.reveal('#faq-itens ul li',50);
+	sr.reveal('#faq-itens ul li',50);
+	sr.reveal('.partner');
+	sr.reveal('#contact-content .box-content header, #contact-content .form',50);
+
 </script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
 
 <?php wp_footer();?>
 
