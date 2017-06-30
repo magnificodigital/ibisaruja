@@ -222,6 +222,7 @@ nav.menu-mobile ul li a:hover {
 #homeslide {
 	background: url('../img/slide1.jpg') no-repeat center top;
 	background-size: cover;
+	position: relative;
 }
 
 #homeslide,
@@ -288,7 +289,6 @@ nav.menu-mobile ul li a:hover {
 
 #formcontato button:hover {background: #aa1f24;}
 .newsletter-box button:hover {background: #029248;}
-
 
 #formcontato input[type="submit"] {
 	background: #00a651;
@@ -579,10 +579,10 @@ nav.menu-mobile ul li a:hover {
 
 footer#site {
 	background: #bf262b;
-	position: fixed;
-	bottom: -1px;
-	width: 100%;
+	position: relative;
 	display: block;
+	bottom: 0;
+	width: 100%;
 	z-index: 500;
 	color: #FFF;
 	text-transform: uppercase;
@@ -603,13 +603,6 @@ footer#site ul {
 	padding: 0;
 	margin: 0;
 	list-style: none;
-}
-
-footer#site ul:after {
-    width: 100%;
-    position: absolute;
-    height: 100%;
-    content: "";
 }
 
 footer#site ul li {
@@ -678,7 +671,6 @@ footer#site ul li a p {
 .open-tel {
 	background: #bf262b;
 	color: #FFF;
-	margin-top: -17px;
 	display: block;
 	position: relative;
 	width: 100%;
@@ -767,6 +759,29 @@ footer#site ul:after,
 	margin-right: 20px;
 }
 
+.text-center {text-align: center;}
+.exibetel {
+	padding: 0 20px;
+	width: 100%;
+	margin-top: -15px;
+}
+
+.createdmagnifico {
+	margin: 0 auto;
+}
+
+.desenvlvidopor {
+	padding: 10px;
+	width: 100%;
+	background: #EEE;
+}
+
+.fixed {position: fixed !important;}
+
+.footerwrapper {
+	height: 54px;
+}
+
 @media (max-width: 1200px) {
 	nav.menu-desktop ul li {margin: 0 13px;}
 }
@@ -784,6 +799,11 @@ footer#site ul:after,
 	#homeslide .container,
 	#homeslide .row {height: 700px;}
 	
+	.exibetel {
+		padding: 0;
+		margin-top: 0;
+	}
+
 	.content-site {
 		height: auto !important;
 	}
@@ -812,6 +832,10 @@ footer#site ul:after,
 	}
 	footer#site ul li {
 		text-align: center;
+	}
+
+	footer#site.fixed {
+		position: relative !important;
 	}
 
 	.ico-mail p,
@@ -843,5 +867,3 @@ footer#site ul:after,
 	#contact-content .box-content {padding-top: 50px; padding-bottom: 50px;}
 }
 
-.text-center {text-align: center;}
-.exibetel {padding: 0 20px; width: 100%;}
