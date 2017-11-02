@@ -38,28 +38,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	</article>
 </div>
 
-<div id="whatsappbox">		
-	<div class="whatsapp-box">
-		<header>
-			<div class="row">
-				<div class="col-xs-3">
-					<i class="fa fa-whatsapp"></i>
-				</div>
-				<div class="col-xs-9">
-					<h4>Atendimento via <span>Whatsapp</span></h4>
-				</div>
-			</div>
-		</header>
-		<section>
-			<div class="row">
-				<div class="col-xs-12">
-					<div id="hotel-ibis-formulario-whatsapp-366e68e297da517f6691"></div>
-				</div>
-			</div>
-		</section>
-	</div>
-</div>
-
 <header id="top-site">
 	<div class="container">
 		<nav class="menu-desktop">
@@ -124,7 +102,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<h2><strong>Invista em um hotel</strong> <br/>com a bandeira<strong> Ibis</strong></h2>
 					<h3><strong>Cadastre-se</strong> e saiba como</h3>
 				</header>
-				<div id="hotel-ibis-0170bafa40236b4788db"></div>
+				<div id="hotel-ibis-tabela-de-valores-d46698e4c4627849ba68"></div>
 			</section>
 		</div>
 	</div>	
@@ -140,7 +118,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<h2><strong>Empreendimento</strong></h2>
 					<h3><?php the_field('empreendimento') ?> <small>Dados obtidos em: <a href="http://accorhotels-group.com" target="_blank">accorhotels-group.com</a></small></h3>
 				</header>
-				<div id="hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b"></div>				
+				<div id="hotel-ibis-tabela-de-valores-empreendimento-17e05d6d266cb28604d0"></div>
 			</section>
 		</div>
 		<div class="row">
@@ -440,7 +418,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 				</div>
 				<div class="col-md-6">
 
-					<div id="hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871" class="form"></div>
+					<div id="hotel-ibis-contato-eddc27e502d4ed2dba69"></div>
 					<div class="exibetel">
 						<button type="button" class="open-tel">Clique para <strong>exibir o telefone</strong></button>
 					</div>
@@ -459,7 +437,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 					<li class="col-20"><a href="http://www.ekoconstrutora.com.br/fale-conosco/" class="ico-mail" target="_blank"><p>Atendimento <span>por e-mail</span></p></a></li>
 					<li class="col-20"><a href="http://www.ekoconstrutora.com.br/ligamos-para-voce/" class="ico-tel" target="_blank"><p>Ligamos <span>para você</span></p></a></li>
 					<li class="col-20"><a href="http://www.ekoconstrutora.com.br/agende-uma-visita/" class="ico-agenda" target="_blank"><p>Agende <span>uma visita</span></p></a></li>
-					<li class="col-20"><a data-fancybox data-src="#whatsappbox" href="javascript:;" class="ico-whatsapp" target="_blank"><p>Atendimento <span>via whatsapp</span></p></a></li>
+					<li class="col-20"><a href="https://api.whatsapp.com/send?phone=5511940082635" class="ico-whatsapp" target="_blank"><p>Atendimento <span>via whatsapp</span></p></a></li>
 				</ul>
 			</div>
 		</div>
@@ -607,10 +585,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	});
 
 	//Forms RD
-	new RDStationForms('hotel-ibis-formulario-whatsapp-366e68e297da517f6691-html', 'UA-47651710-1').createForm();
+	/*new RDStationForms('hotel-ibis-formulario-whatsapp-366e68e297da517f6691-html', 'UA-47651710-1').createForm();
 	new RDStationForms('hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871-html', 'UA-47651710-1').createForm();
 	new RDStationForms('hotel-ibis-0170bafa40236b4788db-html', 'UA-47651710-1').createForm();
 	new RDStationForms('hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b-html', 'UA-47651710-1').createForm();
+*/
+	new RDStationForms('hotel-ibis-tabela-de-valores-d46698e4c4627849ba68-html', 'UA-88643942-1').createForm();
+	new RDStationForms('hotel-ibis-tabela-de-valores-empreendimento-17e05d6d266cb28604d0-html', 'UA-88643942-1').createForm();
+	new RDStationForms('hotel-ibis-contato-eddc27e502d4ed2dba69-html', 'UA-88643942-1').createForm();
 
 	//Reveal
 	window.sr = ScrollReveal({
@@ -672,43 +654,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <![endif]-->
 
 <style type="text/css">	
-	div#conversion-hotel-ibis-0170bafa40236b4788db.wrapper,
-	div#conversion-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b.wrapper,
-	div#conversion-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871.wrapper {background: transparent !important;}
+	
 
-	#form-container-hotel-ibis-0170bafa40236b4788db #conversion-hotel-ibis-0170bafa40236b4788db section,
-	#form-container-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b #conversion-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b section {margin-left: -20px !important;}
-	#conversion-hotel-ibis-0170bafa40236b4788db form input,
-	#conversion-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b form input,
-	#conversion-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 form input,
-	#form-hotel-ibis-formulario-whatsapp-366e68e297da517f6691 form input {
-		border: 0 !important;
-		padding: 10px !important;
-		border-radius: 0 !important;
-		font-size: 24px;
-
+	#form-container-hotel-ibis-tabela-de-valores-d46698e4c4627849ba68 #conversion-hotel-ibis-tabela-de-valores-d46698e4c4627849ba68 section,
+	#form-container-hotel-ibis-tabela-de-valores-empreendimento-17e05d6d266cb28604d0 #conversion-hotel-ibis-tabela-de-valores-empreendimento-17e05d6d266cb28604d0 section,
+	#form-container-hotel-ibis-contato-eddc27e502d4ed2dba69 #conversion-hotel-ibis-contato-eddc27e502d4ed2dba69 section {
+		padding: 0 !important;
 	}
 
-	#form-hotel-ibis-formulario-whatsapp-366e68e297da517f6691 form input {background: #EEE !important;}
-
-	#form-container-hotel-ibis-0170bafa40236b4788db #conversion-hotel-ibis-0170bafa40236b4788db #conversion-form-hotel-ibis-0170bafa40236b4788db div.actions input.call_button,
-	#form-container-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b #conversion-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b #conversion-form-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b div.actions input.call_button,
-	#form-container-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 #conversion-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 #conversion-form-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 div.actions input.call_button {border-radius: 0 !important; border: 0 !important; box-shadow: none !important;}
-	#conversion-modal-hotel-ibis-0170bafa40236b4788db .modal-content section div.actions, #conversion-hotel-ibis-0170bafa40236b4788db section div.actions,
-	#conversion-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b section div.actions,
-	#conversion-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 section div.actions {padding: 0px 0 8px 0!important;}
-	#form-hotel-ibis-0170bafa40236b4788db *,
-	#form-hotel-ibis-tabela-de-valores-empreendimento-5fa6d410407fd908989b *,
-	#form-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 *,
-	#form-hotel-ibis-formulario-whatsapp-366e68e297da517f6691 * {font-family: 'Open Sans', sans-serif !important;}
-
-	#form-container-hotel-ibis-formulario-whatsapp-366e68e297da517f6691 #conversion-hotel-ibis-formulario-whatsapp-366e68e297da517f6691 section {padding: 20px 0 !important;}
-
-
-	@media only screen and (max-width: 768px) {
-		#form-container-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 #conversion-hotel-ibis-formulario-de-contato-e08911d1cc0ecf785871 section {
-			padding: 0 !important;
-		}
+	#conversion-hotel-ibis-tabela-de-valores-d46698e4c4627849ba68,
+	#conversion-hotel-ibis-tabela-de-valores-empreendimento-17e05d6d266cb28604d0,
+	#conversion-hotel-ibis-contato-eddc27e502d4ed2dba69 {
+		background-color: transparent !important;
 	}
 
 </style>
